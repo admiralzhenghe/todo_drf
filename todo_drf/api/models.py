@@ -10,4 +10,4 @@ class Task(models.Model):
   completed = models.BooleanField(blank=True, default=False, null=True)
 
   def __str__(self):
-    return f'{self.id} - {self.title}'
+    return f'{self.user.id} - {self.id} - {self.title}'
