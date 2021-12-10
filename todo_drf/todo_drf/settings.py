@@ -40,19 +40,46 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'api.apps.ApiConfig',
-    'rest_framework',
-    'rest_framework_simplejwt.token_blacklist',
+    
+    # CORS
     'corsheaders',
+    
+    # Rest Framework
+    'rest_framework',
+    'rest_framework.authtoken',
+
+    # Django Rest Auth
+    'dj_rest_auth',
+    
+    #Django All Auth
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'dj_rest_auth.registration',
+    # 'allauth.socialaccount',
+    
+    #Simple JWT
+    'rest_framework_simplejwt',
+    'rest_framework_simplejwt.token_blacklist',
 ]
+
+SITE_ID = 1
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+        'dj_rest_auth.jwt_auth.JWTCookieAuthentication',
+    ),
 }
 
-# Simple JWT
+# Add the following configuration value to your settings file 
+# to enable JWT authentication in dj-rest-auth.
+REST_USE_JWT = True
+# Declare what you want the cookie key to be called.
+# If you want to use the refresh token feature, also be sure to set that variable.
+JWT_AUTH_COOKIE = 'access'
+JWT_AUTH_REFRESH_COOKIE = 'refresh'
 
+# Simple JWT
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
@@ -62,7 +89,7 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': False,
 
     'ALGORITHM': 'HS256',
-    # 'SIGNING_KEY': settings.SECRET_KEY,
+    'SIGNING_KEY': SECRET_KEY,
     'VERIFYING_KEY': None,
     'AUDIENCE': None,
     'ISSUER': None,
