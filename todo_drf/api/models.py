@@ -5,7 +5,7 @@ from django.db.models.deletion import CASCADE
 # Create your models here.
 
 class Task(models.Model):
-  user = models.ForeignKey(User, on_delete=CASCADE, default='')
+  user = models.ForeignKey(User, on_delete=CASCADE, related_name='tasks')
   title = models.CharField(max_length=200)
   completed = models.BooleanField(blank=True, default=False, null=True)
 
