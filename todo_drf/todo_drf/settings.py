@@ -56,11 +56,10 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'dj_rest_auth.registration',
-    # 'allauth.socialaccount',
     
     #Simple JWT
     'rest_framework_simplejwt',
-    'rest_framework_simplejwt.token_blacklist',
+    # 'rest_framework_simplejwt.token_blacklist',
 ]
 
 SITE_ID = 1
@@ -71,8 +70,7 @@ REST_FRAMEWORK = {
     ),
 }
 
-# Add the following configuration value to your settings file 
-# to enable JWT authentication in dj-rest-auth.
+# Add the following configuration value to your settings file to enable JWT authentication in dj-rest-auth.
 REST_USE_JWT = True
 # Declare what you want the cookie key to be called.
 # If you want to use the refresh token feature, also be sure to set that variable.
@@ -85,7 +83,7 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
     'ROTATE_REFRESH_TOKENS': False,
     # Blacklist old refresh tokens
-    'BLACKLIST_AFTER_ROTATION': True,
+    'BLACKLIST_AFTER_ROTATION': False,
     'UPDATE_LAST_LOGIN': False,
 
     'ALGORITHM': 'HS256',
