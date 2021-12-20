@@ -34,7 +34,7 @@ from .serializers import TaskSerializer
 @api_view(['GET'])
 def apiOverview(request):
   api_urls = {
-    'List': '/task-list/<str:user_pk>',
+    'List': '/task-list/',
     'Detail View': '/task-detail/<str:pk>/',
     'Create': 'task-create/',
     'Update': 'task-update/<str:pk>/',
