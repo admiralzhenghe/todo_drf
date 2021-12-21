@@ -1,0 +1,13 @@
+.header-container {
+  background-color: cornsilk;
+  display: flex;
+  height: 2.5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: x-large;
+  color: cornflowerblue;
+}
