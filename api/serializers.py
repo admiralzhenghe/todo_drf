@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 # Rest Framework
 from rest_framework import serializers
 
-# Serializers return a Model object in a JSON reponse
+# Serializers return a Model object in a JSON response
 class TaskSerializer(serializers.ModelSerializer):
   class Meta:
     model = Task
