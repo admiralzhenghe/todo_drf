@@ -1,4 +1,4 @@
-### Fullstack To Do App with User Registration and Login
+## To Do App - Full Stack with User Registration and Login
 
 **Frontend**
 
