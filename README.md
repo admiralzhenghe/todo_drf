@@ -2,25 +2,25 @@
 
 **Frontend**
 
-Languages:
-- Javascript
-- HTML
-- CSS
+- Languages:
+  - Javascript
+  - HTML
+  - CSS
 
-Framework/Libraries:
-- React
-- Bootstrap
+- Framework/Libraries:
+  - React
+  - Bootstrap
 
 **Backend**
 
-Language:
-- Python
+- Language:
+  - Python
 
-Framework/Libraries
-- Django
-- Django Rest Framework
-- Django Rest Auth
-- Simple JWT
+- Framework/Libraries
+  - Django
+  - Django Rest Framework
+  - Django Rest Auth
+  - Simple JWT
 
-Database:
-- SQLite
+- Database:
+  - SQLite
