@@ -3,7 +3,7 @@
 **Frontend**
 
 - Languages:
-  - Javascript
+  - JavaScript
   - HTML
   - CSS
 
@@ -18,8 +18,8 @@
 
 - Framework/Libraries
   - Django
-  - Django Rest Framework
-  - Django Rest Auth
+  - Django REST Framework
+  - Django REST Auth
   - Simple JWT
 
 - Database:
